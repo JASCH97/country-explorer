@@ -1,0 +1,38 @@
+.search-bar-container {
+  max-width: 600px !important;
+  margin: 0 auto !important;
+  gap: 8px !important;
+  align-items: center !important;
+  display: flex !important;
+  
+}
+
+.search-bar {
+  border-radius: 25px !important;
+  border: 2px solid #007bff !important; 
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+  flex: 1;
+}
+
+.search-bar:focus {
+  outline: none !important;
+  border-color: #0056b3 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+.clear-button {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  cursor: pointer;
+}
+
+.clear-button svg {
+  color: red !important;
+  width: 45px !important;
+  height: 45px !important;
+}

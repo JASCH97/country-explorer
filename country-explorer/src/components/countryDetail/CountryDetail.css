@@ -1,0 +1,15 @@
+.custom-modal .modal-content {
+  border: 2px solid black !important;
+}
+
+.close-button {
+  background-color: red !important;   
+  color: white !important;            
+  border: 2px solid black !important; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important; 
+  transition: all 0.2s ease !important; 
+}
+
+.close-button:hover {
+  background-color: darkred !important; 
+}

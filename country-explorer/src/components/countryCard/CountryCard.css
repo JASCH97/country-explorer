@@ -1,0 +1,23 @@
+.country-card {
+  border: 2px solid black !important;
+  border-radius: 8px !important;
+  transition: box-shadow 0.2s ease !important;
+}
+
+.country-card:hover {
+  transform: scale(1.03) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+.view-details-button {
+  background-color: #007bff !important;
+  color: white !important;
+  border: 2px solid black !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.2s ease !important;
+}
+
+.view-details-button:hover {
+  background-color: #0056b3 !important;
+  border-color: black !important;
+}
