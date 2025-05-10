@@ -56,23 +56,13 @@ Why !important was used:
 
 ## Project Structure
 
-![Project Structure](./src/assets/project-structure.png "Project Structure")
+![Project Structure](./country-explorer/src/assets/project-structure.png "Project Structure")
 
 ## Known Issues / Future Work
    - Refactor styles to minimize reliance on !important
    - Improve mobile responsiveness for modals
    - Add support for multi-field search (e.g., region or capital)
    - Add language support
-
-## External Resources Used
-
-   - https://getbootstrap.com/docs/4.1/getting-started/introduction/
-   - https://www.react-bootstrap.cn/docs/getting-started/introduction
-   - https://jsdoc.app/ 
-   - https://precodes.hashnode.dev/jsdoc-the-ultimate-guide-to-documenting-your-javascript-code
-   - https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-   - https://blog.stackademic.com/fetch-api-do-you-really-know-how-to-handle-errors-b06359e47a0a
-   - https://react-icons.github.io/react-icons/
 
 ## Do you want to test the App without installing anything?
 
@@ -127,5 +117,15 @@ Why !important was used:
 - Clean and commented code.
 - Correct handling of load states, error and empty results.
 - Clear and tidy visual presentation (advanced graphic creativity will not be evaluated, only usability).
+
+## External Resources Used
+
+   - https://getbootstrap.com/docs/4.1/getting-started/introduction/
+   - https://www.react-bootstrap.cn/docs/getting-started/introduction
+   - https://jsdoc.app/ 
+   - https://precodes.hashnode.dev/jsdoc-the-ultimate-guide-to-documenting-your-javascript-code
+   - https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+   - https://blog.stackademic.com/fetch-api-do-you-really-know-how-to-handle-errors-b06359e47a0a
+   - https://react-icons.github.io/react-icons/
 
 
