@@ -1,5 +1,12 @@
-import { Row, Col } from 'react-bootstrap';
-import CountryCard from '../countryCard/CountryCard';
+import { Row, Col } from "react-bootstrap";
+import CountryCard from "../countryCard/CountryCard";
+
+/**
+ * Responsive grid layout for displaying country cards.
+ * @param {Object} props - Component properties
+ * @param {Country[]} props.countries - Array of country objects to display
+ * @param {(country: Country) => void} props.onSelect - Handler for card selection
+ */
 
 const CountryList = ({ countries, onSelect }) => {
   return (
@@ -14,4 +21,3 @@ const CountryList = ({ countries, onSelect }) => {
 };
 
 export default CountryList;
-

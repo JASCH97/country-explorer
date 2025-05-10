@@ -7,6 +7,11 @@ import CountryList from "./components/countryList/CountryList";
 import CountryDetail from "./components/countryDetail/CountryDetail";
 import SearchBar from "./components/searchBar/SearchBar";
 
+/**
+ * Root component for Country Explorer application
+ * @returns {JSX.Element} Main application layout
+ */
+
 function App() {
   const [countries, setCountries] = useState([]);
   const [filteredCountries, setFilteredCountries] = useState([]);
@@ -14,6 +19,11 @@ function App() {
   const [error, setError] = useState(null);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
+
+  /**
+   * Fetches country data on component mount
+   * @sideeffect Updates countries, filteredCountries, loading, error states
+   */
 
   useEffect(() => {
     const loadCountries = async () => {
@@ -30,6 +40,13 @@ function App() {
 
     loadCountries();
   }, []);
+
+  /**
+   * Filters countries based on search term
+   * @sideeffect Updates filteredCountries
+   * @dependency {string} searchTerm - Current search query
+   * @dependency {Country[]} countries - Full country list
+   */
 
   useEffect(() => {
     const term = searchTerm.trim().toLowerCase();

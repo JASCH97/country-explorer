@@ -1,5 +1,13 @@
-import './CountryDetail.css';
+import "./CountryDetail.css";
 import { Modal, Button, ListGroup } from "react-bootstrap";
+
+/**
+ * Modal dialog displaying comprehensive country information, including borders resolved from country codes.
+ * @param {Object} props - Component properties
+ * @param {Country} props.country - Primary country data to display
+ * @param {Country[]} props.allCountries - Full country list for border resolution
+ * @param {Function} props.onClose - Callback to close the modal
+ */
 
 const CountryDetail = ({ country, allCountries, onClose }) => {
   if (!country) return null;
@@ -24,7 +32,12 @@ const CountryDetail = ({ country, allCountries, onClose }) => {
     : "None";
 
   return (
-    <Modal show={true} onHide={onClose} size="lg" dialogClassName="custom-modal">
+    <Modal
+      show={true}
+      onHide={onClose}
+      size="lg"
+      dialogClassName="custom-modal"
+    >
       <Modal.Header closeButton>
         <Modal.Title>{country.name.official}</Modal.Title>
       </Modal.Header>
