@@ -1,3 +1,4 @@
+import './CountryDetail.css';
 import { Modal, Button, ListGroup } from "react-bootstrap";
 
 const CountryDetail = ({ country, allCountries, onClose }) => {
@@ -23,7 +24,7 @@ const CountryDetail = ({ country, allCountries, onClose }) => {
     : "None";
 
   return (
-    <Modal show={true} onHide={onClose} size="lg">
+    <Modal show={true} onHide={onClose} size="lg" dialogClassName="custom-modal">
       <Modal.Header closeButton>
         <Modal.Title>{country.name.official}</Modal.Title>
       </Modal.Header>
@@ -57,7 +58,7 @@ const CountryDetail = ({ country, allCountries, onClose }) => {
         </ListGroup>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={onClose}>
+        <Button className="close-button" onClick={onClose}>
           Close
         </Button>
       </Modal.Footer>

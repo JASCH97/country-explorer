@@ -1,10 +1,11 @@
 import "./App.css";
+import bgImage from "./assets/logo_CountryExplorer.jpg";
 import { useEffect, useState } from "react";
 import { Container, Spinner, Alert } from "react-bootstrap";
 import { fetchAllCountries } from "./services/api";
-import CountryList from "./components/CountryList";
-import CountryDetail from "./components/CountryDetail";
-import SearchBar from "./components/SearchBar";
+import CountryList from "./components/countryList/CountryList";
+import CountryDetail from "./components/countryDetail/CountryDetail";
+import SearchBar from "./components/searchBar/SearchBar";
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -45,8 +46,16 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>🌍 Country Explorer</h1>
+      <header
+        className="App-header"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          padding: "12rem",
+        }}
+      >
+        <h1>Country Explorer</h1>
       </header>
 
       <Container className="my-4">

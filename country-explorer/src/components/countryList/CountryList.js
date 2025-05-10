@@ -1,5 +1,5 @@
 import { Row, Col } from 'react-bootstrap';
-import CountryCard from './CountryCard';
+import CountryCard from '../countryCard/CountryCard';
 
 const CountryList = ({ countries, onSelect }) => {
   return (
