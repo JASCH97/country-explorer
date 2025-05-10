@@ -32,13 +32,15 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (!searchTerm.trim()) {
+    const term = searchTerm.trim().toLowerCase();
+
+    if (!term) {
       setFilteredCountries(countries);
       return;
     }
 
     const results = countries.filter((country) =>
-      country.name.official.toLowerCase().includes(searchTerm.toLowerCase())
+      country.name.official.toLowerCase().includes(term)
     );
 
     setFilteredCountries(results);
