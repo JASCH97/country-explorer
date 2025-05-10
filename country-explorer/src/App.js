@@ -4,6 +4,7 @@ import { Container, Spinner, Alert } from "react-bootstrap";
 import { fetchAllCountries } from "./services/api";
 import CountryList from "./components/CountryList";
 import CountryDetail from "./components/CountryDetail";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -11,6 +12,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedCountry, setSelectedCountry] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     const loadCountries = async () => {
@@ -28,6 +30,19 @@ function App() {
     loadCountries();
   }, []);
 
+  useEffect(() => {
+    if (!searchTerm.trim()) {
+      setFilteredCountries(countries);
+      return;
+    }
+
+    const results = countries.filter((country) =>
+      country.name.official.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    setFilteredCountries(results);
+  }, [searchTerm, countries]);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -35,11 +50,13 @@ function App() {
       </header>
 
       <Container className="my-4">
+        <SearchBar value={searchTerm} onChange={setSearchTerm} />
+
         {loading && <Spinner animation="border" />}
         {error && <Alert variant="danger">{error}</Alert>}
         {!loading &&
           !error &&
-          (countries.length === 0 ? (
+          (filteredCountries.length === 0 ? (
             <Alert variant="info">No countries available.</Alert>
           ) : (
             <CountryList
